@@ -1,0 +1,30 @@
+footer {
+  background-color: #1f466b;
+  padding: 40px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: #fff;
+      position: relative;
+      margin-left: 45px;
+      &:after {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 4px;
+        width: 1px;
+        height: 13px;
+        background-color: #fff;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+      &:first-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

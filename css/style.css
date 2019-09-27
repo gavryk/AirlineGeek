@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/roboto/roboto-bold/roboto-bold.woff2") format("woff2"), url("../fonts/roboto/roboto-bold/roboto-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/roboto/roboto-medium/roboto-medium.woff2") format("woff2"), url("../fonts/roboto/roboto-medium/roboto-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/roboto/roboto-regular/roboto-regular.woff2") format("woff2"), url("../fonts/roboto/roboto-regular/roboto-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'source_sans';
+  src: url("../fonts/SourceSansPro/SourceSansPro-black/sourcesanspro-black.woff2") format("woff2"), url("../fonts/SourceSansPro/SourceSansPro-black/sourcesanspro-black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+@font-face {
+  font-family: 'source_sans';
+  src: url("../fonts/SourceSansPro/SourceSansPro-regular/sourcesanspro-regular.woff2") format("woff2"), url("../fonts/SourceSansPro/SourceSansPro-regular/sourcesanspro-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+header {
+  border-top: 12px solid #1f466b; }
+  header .top_header, header .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; }
+    header .top_header nav a, header .menu nav a {
+      position: relative; }
+      header .top_header nav a:after, header .menu nav a:after {
+        content: '';
+        position: absolute;
+        height: 13px;
+        width: 1px;
+        background-color: #000; }
+  header .top_header {
+    padding: 20px 0; }
+    header .top_header nav a {
+      margin-left: 45px;
+      font-weight: 400;
+      font-size: 13px; }
+      header .top_header nav a:after {
+        right: -23px;
+        top: 2px; }
+      header .top_header nav a:last-child:after {
+        display: none; }
+      header .top_header nav a:hover {
+        text-decoration: underline; }
+  header .menu {
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #b7b7b7; }
+    header .menu li {
+      padding: 8px 25px;
+      position: relative; }
+      header .menu li a {
+        display: inline-block;
+        padding: 10px 20px;
+        font-family: roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        transition: .4s ease-out; }
+      header .menu li:after {
+        content: '';
+        position: absolute;
+        left: -5px;
+        top: 22px;
+        height: 13px;
+        width: 2px;
+        background-color: #000; }
+      header .menu li:first-child:after {
+        display: none; }
+      header .menu li:hover a {
+        box-shadow: 0 0 0 1px #095b9d;
+        transition: .4s ease-out;
+        color: #095b9d;
+        border-radius: 5px; }
+
+footer {
+  background-color: #1f466b;
+  padding: 40px 0; }
+  footer .container {
+    display: flex;
+    justify-content: space-between; }
+    footer .container a {
+      color: #fff;
+      position: relative;
+      margin-left: 45px; }
+      footer .container a:after {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 4px;
+        width: 1px;
+        height: 13px;
+        background-color: #fff; }
+      footer .container a:hover {
+        text-decoration: underline; }
+      footer .container a:first-child:after {
+        display: none; }
+
+.news_ticker {
+  display: flex; }
+  .news_ticker .news_btn {
+    font-family: source_sans, sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: #fff;
+    background-color: #4b91b7;
+    padding: 25px 40px;
+    width: 350px; }
+  .news_ticker .tickers {
+    margin-left: 10px;
+    display: flex; }
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none; }
+
+body {
+  border: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: source_sans, sans-serif;
+  color: #fff;
+  font-size: 15px; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.container {
+  margin: 0 auto;
+  max-width: 96%;
+  width: 1300px; }
+
+/*# sourceMappingURL=style.css.map */
