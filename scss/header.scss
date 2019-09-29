@@ -1,9 +1,9 @@
 header {
   border-top: 12px solid #1f466b;
   .top_header, .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    @include flex-box();
+    @include align-items(center);
+    @include justify-content(space-around);
     nav {
       a {
         position: relative;
