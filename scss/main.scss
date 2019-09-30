@@ -1,4 +1,4 @@
-@import "mixins", "vars", 'fonts';
+@import "mixins", "vars", 'fonts', 'rwd';
 @import "header";
 @import "footer";
 
@@ -210,15 +210,20 @@ h4 {
 #news_ticker {
   .container {
     @include flex-box;
+    @include align-items(center);
     padding: 20px 0;
     .news_btn {
+      @include flex-box;
+      @include justify-content(center);
+      @include align-items(center);
+      height: 100%;
       font-family: source_sans, sans-serif;
       font-weight: 900;
       font-size: 24px;
       color: #fff;
       background-color: #4b91b7;
-      padding: 15px 40px;
-      width: 20%;
+      padding: 15px 20px;
+      width: 25%;
       text-transform: uppercase;
     }
     .tickers {
@@ -468,7 +473,10 @@ h4 {
 /*                       NEWS SECTION STYLE                         */
 
 #news {
+  padding-bottom: 15px;
   .container {
+    padding-bottom: 65px;
+    border-bottom: 1px solid #b7b7b7;
     @include flex-box;
     @include justify-content(space-between);
     .left_side {
@@ -532,8 +540,13 @@ h4 {
         .tweet {
           @include flex-box;
           @include align-items(center);
+          max-width: 98%;
           padding-top: 25px;
           .tweet_wrapper {
+            margin: 5px 0 0 20px;
+            a {
+              color: #03a9f4;
+            }
             .tweet_info {
               @include flex-box;
               @include justify-content(space-between);

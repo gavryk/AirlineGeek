@@ -1,0 +1,21 @@
+@media (max-width: 1300px) {
+  header {
+    .container {
+      .top_header {
+        nav {
+          margin: 0 auto;
+        }
+      }
+      .menu {
+        li {
+          padding: 8px 10px;
+        }
+      }
+    }
+  }
+  #news_ticker {
+    .container {
+      @include flex-wrap(wrap);
+    }
+  }
+}

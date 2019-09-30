@@ -3,7 +3,23 @@ header {
   .top_header, .menu {
     @include flex-box();
     @include align-items(center);
-    @include justify-content(space-around);
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+    .search_panel {
+      position: relative;
+      input {
+          border: 1px solid #b7b7b7;
+          border-radius: 5px;
+          width: 260px;
+          padding: 10px 10px 13px 15px;
+        }
+      .search {
+        content: '';
+        position: absolute;
+        right: 10px;
+        top: 12px;
+      }
+    }
     nav {
       a {
         position: relative;
