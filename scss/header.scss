@@ -51,7 +51,7 @@ header {
         font-family: roboto, sans-serif;
         font-size: 14px;
         font-weight: 500;
-        transition: .4s ease-out;
+        transition: .2s ease-out;
       }
       &:after {
         content: '';
@@ -70,7 +70,7 @@ header {
       &:hover {
         a {
           box-shadow: 0 0 0 1px #095b9d;
-          transition: .4s ease-out;
+          transition: .2s ease-out;
           color: #095b9d;
           border-radius: 5px;
         }

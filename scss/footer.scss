@@ -4,6 +4,10 @@ footer {
   .container {
     display: flex;
     justify-content: space-between;
+    span {
+      color: #fff;
+      font-size: 13px;
+    }
     a {
       color: #fff;
       position: relative;

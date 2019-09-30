@@ -1,5 +1,4 @@
-@import "mixins";
-@import "fonts";
+@import "mixins", "vars", 'fonts';
 @import "header";
 @import "footer";
 
@@ -18,12 +17,41 @@ body {
   font-size: 15px;
 }
 
+p {
+  line-height: 22px;
+}
+
 a {
   color: #000;
   text-decoration: none;
 }
+
 li {
   list-style: none;
+}
+
+h2 {
+  font-size: 34px;
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  line-height: 40px;
+  margin-bottom: 38px;
+}
+h3 {
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  color: #000;
+  line-height: 24px;
+  margin-bottom: 23px;
+}
+h4 {
+  border-top: 1px solid #000;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 20px 17px;
+  letter-spacing: 6px;
 }
 
 .container {
@@ -31,8 +59,153 @@ li {
   max-width: 96%;
   width: 1300px;
 }
+.post_date {
+  font-size: 13px;
+  color: #858585;
+  position: relative;
+  margin-left: 5px;
+  padding-bottom: 10px;
+}
 
-/*          news ticker section style               */
+/*                    NEWS TICKERS STYLE                  */
+.ticker {
+  @include flex-box;
+  @include align-items(center);
+  max-width: 32%;
+  .ticker_description {
+    @include flex-box;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    .post_date {
+      &:after {
+        content: ']';
+        position: absolute;
+        top: 0;
+        right: -10%;
+        font-size: 13px;
+        color: #000;
+      }
+      &:before {
+        content: '[';
+        position: absolute;
+        top: 0;
+        left: -10%;
+        font-size: 13px;
+        color: #000;
+      }
+    }
+    .news_ticker-title {
+      font-size: 15px;
+      color: #000;
+    }
+  }
+}
+.author_post {
+  font-size: 12px;
+  font-family: source_sans, sans-serif;
+  color: #000;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 15px;
+  &:after {
+    content: 'by';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    font-size: 12px;
+  }
+}
+
+
+/*                          COlORS FOR POSTS HEAD                   */
+
+.post_head {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 4px;
+  }
+}
+
+.top_stories {
+  &:before {
+    background-color: $top_stories_col;
+  }
+  .category_name {
+    color: $top_stories_col;
+    &:after,
+    &:before {
+      color: $top_stories_col;
+    }
+  }
+}
+.exclusive {
+  &:before {
+    background-color: $exclusive_col;
+  }
+  .category_name {
+    color: $exclusive_col;
+    &:after,
+    &:before {
+      color: $exclusive_col;
+    }
+  }
+}
+.opinions {
+  &:before {
+    background-color: $opinion_col;
+  }
+  .category_name {
+    color: $opinion_col;
+    &:after,
+    &:before {
+      color: $opinion_col;
+    }
+  }
+}
+.airport {
+  &:before {
+    background-color: $airports_col;
+  }
+  .category_name {
+    color: $airports_col;
+    &:after,
+    &:before {
+      color: $airports_col;
+    }
+  }
+}
+.editor_pick {
+  &:before {
+    background-color: $editor_pick_col;
+  }
+  .category_name {
+    color: $editor_pick_col;
+    &:after,
+    &:before {
+      color: $editor_pick_col;
+    }
+  }
+}
+.latest_news {
+  &:before {
+    background-color: $latest_news_col;
+  }
+  .category_name {
+    color: $latest_news_col;
+    &:after,
+    &:before {
+      color: $latest_news_col;
+    }
+  }
+}
+/* ----------------------------------------------------------------------------------------  */
+
+
+/*          NEWS TICKER SECTION STYLE               */
 
 #news_ticker {
   .container {
@@ -44,48 +217,346 @@ li {
       font-size: 24px;
       color: #fff;
       background-color: #4b91b7;
-      padding: 25px 40px;
-      width: 350px;
+      padding: 15px 40px;
+      width: 20%;
       text-transform: uppercase;
     }
     .tickers {
-      width: 100%;
+      width: 75%;
       margin-left: 15px;
       @include flex-box;
       @include justify-content(space-between);
-      .ticker {
-        @include flex-box;
-        @include align-items(center);
-        max-width: 32%;
-        .ticker_description {
-          @include flex-box;
-         flex-wrap: wrap;
-          margin-left: 15px;
-          .news_date {
-            font-size: 13px;
-            color: #858585;
-            position: relative;
-            margin-left: 5px;
-            &:after {
-              content: ']';
-              position: absolute;
-              top: 0;
-              right: -10%;
-              font-size: 13px;
-              color: #000;
-            }
-            &:before {
-              content: '[';
-              position: absolute;
-              top: 0;
-              left: -10%;
-              font-size: 13px;
-              color: #000;
+      @include flex-wrap(wrap);
+    }
+  }
+}
+
+/*                         AIRPORT POSTS SECTION                      */
+.post_head {
+  padding-top: 15px;
+  margin-bottom: 50px;
+  position: relative;
+  .category_name {
+    font-family: roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 5px;
+    margin-right: 20px;
+    position: relative;
+    &:before {
+      content: '[';
+      position: absolute;
+      top: 0;
+      left: -10%;
+      font-size: 14px;
+    }
+    &:after {
+      content: ']';
+      position: absolute;
+      top: 0;
+      right: -10%;
+      font-size: 14px;
+    }
+  }
+}
+
+#main_airport_post {
+  .container {
+    border-top: 1px solid #b7b7b7;
+    padding-top: 25px;
+    @include flex-box;
+    @include justify-content(space-between);
+    .main-post {
+      width: 38%;
+    }
+    .main_post-img {
+      position: relative;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      .image_description {
+        font-size: 12px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 15px 10px;
+      }
+    }
+  }
+}
+
+/*                       POST SECTION                     */
+#posts {
+  .container {
+    border-top: 1px solid #b7b7b7;
+    border-bottom: 1px solid #b7b7b7;
+    padding: 22px 0;
+    @include flex-box;
+    .post_column {
+      border-left: 1px solid #b7b7b7;
+      padding: 0 15px;
+      &:first-child {
+        width: 35%;
+        border: none;
+      }
+      &:nth-child(2) {
+        .post {
+          margin-bottom: 50px;
+          position: relative;
+          .post_img {
+            width: 140px;
+            height: 160px;
+          }
+          .post_description {
+            @include flex-box;
+            @include align-items(center);
+            .post-title_wrapper {
+              margin-left: 30px;
             }
           }
-          .news_ticker-title {
-            font-size: 15px;
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #b7b7b7;
+          }
+          &:last-child {
+            &:after {
+              display: none;
+            }
+            margin: 0;
+          }
+        }
+      }
+      .post {
+        h2 {
+          padding-top: 30px;
+        }
+        i {
+          display: inline-block;
+          margin-bottom: 30px;
+          line-height: 22px;
+        }
+        .post_img {
+          .img_description {
+            display: inline-block;
+            font-size: 12px;
+            line-height: 16px;
+            padding-bottom: 25px;
+          }
+        }
+        .post_head {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+/*                  EDITOR"S PICK SECTION STYLE                   */
+.editor_posts,
+.lates-news-wrapper {
+  padding-top: 23px;
+  @include flex-box;
+  @include justify-content(space-around);
+  @include flex-wrap(wrap);
+  .post {
+    width: 30%;
+    .post_head {
+      margin-bottom: 25px;
+    }
+    .post_img {
+      margin-bottom: 30px;
+    }
+  }
+}
+#editor_pick {
+  padding: 15px 0 65px 0;
+  .container {
+    @include flex-box;
+    @include justify-content(space-between);
+    .editor_pick {
+      h4 {
+        color: #fff;
+        background-color: $editor_pick_col;
+      }
+      width: 65%;
+    }
+    .news_column {
+      width: 33%;
+      h4 {
+        color: #fff;
+        background-color: #b7b7b7;
+      }
+    }
+  }
+}
+.news_posts {
+  .ticker {
+    max-width: 100%;
+    margin-top: 23px;
+  }
+}
+
+
+/*                       AIRPORTS SECTION STYLE                           */
+
+
+#airports {
+  overflow: hidden;
+  padding-bottom: 100px;
+  h4 {
+    color: #000;
+    background-color: #b18850;
+  }
+  .airport_main_wrapper {
+    padding-top: 23px;
+    @include flex-box;
+    .post_column {
+      @include flex-box;
+      width: 50%;
+      border-right: 1px solid #b7b7b7;
+      &:last-child {
+        border: none;
+      }
+    }
+    .post-title_wrapper {
+      margin-left: 25px;
+    }
+    .right {
+      @include flex-box;
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      .post {
+        padding: 0 0 50px 15px;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 30px;
+          left: 15px;
+          width: 100%;
+          height: 1px;
+          background-color: #b7b7b7;
+        }
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+        .post_head {
+          margin-bottom: 25px;
+        }
+        .post_description {
+          @include flex-box;
+        }
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/*                       NEWS SECTION STYLE                         */
+
+#news {
+  .container {
+    @include flex-box;
+    @include justify-content(space-between);
+    .left_side {
+      width: 65%;
+      h4 {
+        color: #000;
+        background-color: #b8c3d7;
+      }
+      .video_wrapper {
+        @include flex-box;
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+        padding-top: 20px;
+        .video {
+          width: 49%;
+          text-align: center;
+          margin-bottom: 30px;
+          img {
+            width: 100%;
+          }
+          .video_description {
+            font-size: 12px;
+            font-family: source_sans, sans-serif;
+            font-weight: 400;
             color: #000;
+          }
+        }
+      }
+    }
+    .right_side {
+      width: 33%;
+      h4 {
+        color: #fff;
+        background-color: #b7b7b7;
+      }
+      .trip_post {
+        padding: 20px 0 36px 0;
+        border-bottom: 1px solid #b7b7b7;
+        .post_img {
+          @include flex-box;
+          @include flex-wrap(wrap);
+          @include justify-content(center);
+          span {
+            font-size: 12px;
+            text-align: center;
+            margin: 15px 0 30px 0;
+          }
+        }
+        .post-title_wrapper {
+          margin-left: 15px;
+        }
+      }
+      .news_posts {
+        margin-bottom: 45px;
+      }
+      .twitter_feed {
+        h4 {
+          color: #fff;
+          background-color: #03a9f4;
+        }
+        .tweet {
+          @include flex-box;
+          @include align-items(center);
+          padding-top: 25px;
+          .tweet_wrapper {
+            .tweet_info {
+              @include flex-box;
+              @include justify-content(space-between);
+              .post_date {
+                padding-bottom: 0;
+                &:before {
+                  content: '[';
+                  position: absolute;
+                  top: 0;
+                  left: -10%;
+                  font-size: 13px;
+                  color: #000;
+                }
+                &:after {
+                  content: ']';
+                  position: absolute;
+                  top: 0;
+                  right: -10%;
+                  font-size: 13px;
+                  color: #000;
+                }
+              }
+            }
           }
         }
       }
