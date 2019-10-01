@@ -1,6 +1,8 @@
-@import "mixins", "vars", 'fonts', 'rwd';
+@import "mixins", "vars";
+@import "fonts";
 @import "header";
 @import "footer";
+@import "rwd";
 
 * {
   margin: 0;
@@ -67,6 +69,15 @@ h4 {
   padding-bottom: 10px;
 }
 
+.editor_posts, .latest_news, .trip_post {
+  .post_img {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
 /*                    NEWS TICKERS STYLE                  */
 .ticker {
   @include flex-box;
@@ -97,6 +108,11 @@ h4 {
     .news_ticker-title {
       font-size: 15px;
       color: #000;
+    }
+  }
+  &:hover {
+    .news_ticker-title {
+      text-decoration: underline;
     }
   }
 }
@@ -387,7 +403,7 @@ h4 {
   .container {
     @include flex-box;
     @include justify-content(space-between);
-    .editor_pick {
+    .editor_pick-wrapper {
       h4 {
         color: #fff;
         background-color: $editor_pick_col;

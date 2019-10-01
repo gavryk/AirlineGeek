@@ -2,8 +2,9 @@ footer {
   background-color: #1f466b;
   padding: 40px 0;
   .container {
-    display: flex;
-    justify-content: space-between;
+    @include flex-box;
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
     span {
       color: #fff;
       font-size: 13px;

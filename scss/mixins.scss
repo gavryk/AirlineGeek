@@ -45,3 +45,14 @@
   -ms-flex-wrap: $wrap;
   flex-wrap: $wrap;
 }
+
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin translateX ($x) {
+  @include transform(translate($x));
+}
