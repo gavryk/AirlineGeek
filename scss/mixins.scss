@@ -52,7 +52,3 @@
   -ms-transform: $transforms;
   transform: $transforms;
 }
-
-@mixin translateX ($x) {
-  @include transform(translate($x));
-}
