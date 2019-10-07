@@ -3,32 +3,32 @@
   font-family: "roboto";
   font-weight: normal;
   font-style: normal;
-  src: url("../font/roboto/roboto-bold/roboto-bold.eot");
-  src: url("../font/roboto/roboto-bold/roboto-bold.eot?#iefix") format("embedded-opentype"), url("../font/roboto/roboto-bold/roboto-bold.woff") format("woff"), url("../font/roboto/roboto-bold/roboto-bold.ttf") format("truetype"); }
+  src: url("../fonts/roboto/roboto-bold/roboto-bold.eot");
+  src: url("../fonts/roboto/roboto-bold/roboto-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/roboto-bold/roboto-bold.woff") format("woff"); }
 @font-face {
   font-family: "roboto";
   font-weight: normal;
   font-style: normal;
-  src: url("../font/roboto/roboto-medium/roboto-medium.eot");
-  src: url("../font/roboto/roboto-medium/roboto-medium.eot?#iefix") format("embedded-opentype"), url("../font/roboto/roboto-medium/roboto-medium.woff") format("woff"), url("../font/roboto/roboto-medium/roboto-medium.ttf") format("truetype"); }
+  src: url("../fonts/roboto/roboto-medium/roboto-medium.eot");
+  src: url("../fonts/roboto/roboto-medium/roboto-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/roboto-medium/roboto-medium.woff") format("woff"); }
 @font-face {
   font-family: "roboto";
   font-weight: normal;
   font-style: normal;
-  src: url("../font/roboto/roboto-regular/roboto-regular.eot");
-  src: url("../font/roboto/roboto-regular/roboto-regular.eot?#iefix") format("embedded-opentype"), url("../font/roboto/roboto-regular/roboto-regular.woff") format("woff"), url("../font/roboto/roboto-regular/roboto-regular.ttf") format("truetype"); }
+  src: url("../fonts/roboto/roboto-regular/roboto-regular.eot");
+  src: url("../fonts/roboto/roboto-regular/roboto-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/roboto-regular/roboto-regular.woff") format("woff"); }
 @font-face {
   font-family: "source_sans";
   font-weight: normal;
   font-style: normal;
-  src: url("../font/SourceSansPro/SourceSansPro-black/sourcesanspro-black.eot");
-  src: url("../font/SourceSansPro/SourceSansPro-black/sourcesanspro-black.eot?#iefix") format("embedded-opentype"), url("../font/SourceSansPro/SourceSansPro-black/sourcesanspro-black.woff") format("woff"), url("../font/SourceSansPro/SourceSansPro-black/sourcesanspro-black.ttf") format("truetype"); }
+  src: url("../fonts/SourceSansPro/SourceSansPro-black/sourcesanspro-black.eot");
+  src: url("../fonts/SourceSansPro/SourceSansPro-black/sourcesanspro-black.eot?#iefix") format("embedded-opentype"), url("../fonts/SourceSansPro/SourceSansPro-black/sourcesanspro-black.woff") format("woff"); }
 @font-face {
   font-family: "source_sans";
   font-weight: normal;
   font-style: normal;
-  src: url("../font/SourceSansPro/SourceSansPro-regular/sourcesanspro-regular.eot");
-  src: url("../font/SourceSansPro/SourceSansPro-regular/sourcesanspro-regular.eot?#iefix") format("embedded-opentype"), url("../font/SourceSansPro/SourceSansPro-regular/sourcesanspro-regular.woff") format("woff"), url("../font/SourceSansPro/SourceSansPro-regular/sourcesanspro-regular.ttf") format("truetype"); }
+  src: url("../fonts/SourceSansPro/SourceSansPro-regular/sourcesanspro-regular.eot");
+  src: url("../fonts/SourceSansPro/SourceSansPro-regular/sourcesanspro-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SourceSansPro/SourceSansPro-regular/sourcesanspro-regular.woff") format("woff"); }
 header {
   border-top: 12px solid #1f466b; }
   header .top_header, header .menu {
@@ -188,7 +188,7 @@ footer {
     color: #fff;
     background-color: #4b91b7;
     padding: 15px 20px;
-    width: 30%;
+    width: 20%;
     text-transform: uppercase;
     -webkit-transition: all 0.4s ease-out;
     -khtml-transition: all 0.4s ease-out;
@@ -611,7 +611,7 @@ footer {
     font-size: 12px; }
 
   #news_ticker .container a.news_btn {
-    width: 25%;
+    width: 20%;
     font-size: 18px;
     padding: 15px; } }
 @media (max-width: 992px) {
