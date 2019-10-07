@@ -93,28 +93,39 @@
     border-bottom: 1px solid #b7b7b7;
     padding: 22px 0;
     @include flex-box;
+    @include flex-wrap(wrap);
+
     .post_column {
       border-left: 1px solid #b7b7b7;
       padding: 0 15px;
+      flex-basis: 20%;
+      @include flex-grow(1);
+      @include flex-basis(20%);
       &:first-child {
-        width: 35%;
+        flex-basis: 0;
         border: none;
-    }
+      }
+
       &:nth-child(2) {
+        @include flex-grow(2);
+        @include flex-basis(40%);
         .post {
           margin-bottom: 50px;
           position: relative;
+
           .post_img {
             width: 140px;
             height: 160px;
-        }
+          }
+
           .post_description {
             @include flex-box;
             @include align-items(center);
             .post-title_wrapper {
               margin-left: 30px;
+            }
           }
-        }
+
           &:after {
             content: '';
             position: absolute;
@@ -123,38 +134,44 @@
             width: 100%;
             height: 1px;
             background-color: #b7b7b7;
-        }
+          }
+
           &:last-child {
             &:after {
               display: none;
-          }
+            }
+
             margin: 0;
+          }
         }
       }
-    }
+
       .post {
         h2 {
           padding-top: 30px;
-      }
+        }
+
         i {
           display: inline-block;
           margin-bottom: 30px;
           line-height: 22px;
-      }
+        }
+
         .post_img {
           .img_description {
             display: inline-block;
             font-size: 12px;
             line-height: 16px;
             padding-bottom: 25px;
+          }
         }
-      }
+
         .post_head {
           margin-bottom: 25px;
+        }
       }
     }
   }
-}
 }
 
 /*                  EDITOR"S PICK SECTION STYLE                   */
@@ -164,76 +181,91 @@
   @include flex-box;
   @include justify-content(space-around);
   @include flex-wrap(wrap);
+
   .post {
     width: 30%;
+
     .post_head {
       margin-bottom: 25px;
-  }
+    }
+
     .post_img {
       margin-bottom: 30px;
+    }
   }
-}
 }
 #editor_pick {
   padding: 15px 0 65px 0;
+
   .container {
     @include flex-box;
     @include justify-content(space-between);
+
     .editor_pick-wrapper {
       h4 {
         color: #fff;
         background-color: $editor_pick_col;
-    }
+      }
+
       width: 65%;
-  }
+    }
+
     .news_column {
       width: 33%;
+
       h4 {
         color: #fff;
         background-color: #b7b7b7;
+      }
     }
   }
-}
 }
 .news_posts {
   .ticker {
     max-width: 100%;
     margin-top: 23px;
-}
+  }
 }
 
 
 /*                       AIRPORTS SECTION STYLE                           */
 
-
 #airports {
   overflow: hidden;
   padding-bottom: 100px;
+
   h4 {
     color: #000;
     background-color: #b18850;
-}
+  }
+
   .airport_main_wrapper {
     padding-top: 23px;
     @include flex-box;
+
     .post_column {
       @include flex-box;
       width: 50%;
       border-right: 1px solid #b7b7b7;
+
       &:last-child {
         border: none;
+      }
     }
-  }
+
     .post-title_wrapper {
       margin-left: 25px;
-  }
+    }
+
     .right {
       @include flex-box;
       @include flex-direction(row);
       @include flex-wrap(wrap);
+
       .post {
         padding: 0 0 50px 15px;
         position: relative;
+
         &:after {
           content: '';
           position: absolute;
@@ -242,60 +274,57 @@
           width: 100%;
           height: 1px;
           background-color: #b7b7b7;
-      }
+        }
+
         &:last-child {
           &:after {
             display: none;
+          }
         }
-      }
+
         .post_head {
           margin-bottom: 25px;
-      }
+        }
+
         .post_description {
           @include flex-box;
-      }
+        }
+
         &:last-child {
           padding-bottom: 0;
+        }
       }
     }
   }
-}
 }
 
 /*                       NEWS SECTION STYLE                         */
 
 #news {
   padding-bottom: 15px;
-
   .container {
     padding-bottom: 65px;
     border-bottom: 1px solid #b7b7b7;
     @include flex-box;
     @include justify-content(space-between);
-
     .left_side {
       width: 65%;
-
       h4 {
         color: #000;
         background-color: #b8c3d7;
       }
-
       .video_wrapper {
         @include flex-box;
         @include flex-wrap(wrap);
         @include justify-content(space-between);
         padding-top: 20px;
-
         .video {
           width: 49%;
           text-align: center;
           margin-bottom: 30px;
-
           .video_play {
             width: 100%;
           }
-
           .video_description {
             font-size: 12px;
             font-family: source_sans, sans-serif;
@@ -308,12 +337,10 @@
 
     .right_side {
       width: 33%;
-
       h4 {
         color: #fff;
         background-color: #b7b7b7;
       }
-
       .trip_post {
         padding: 20px 0 36px 0;
         border-bottom: 1px solid #b7b7b7;
@@ -353,18 +380,17 @@
 
           .tweet_wrapper {
             margin: 5px 0 0 20px;
-
             a {
               color: #03a9f4;
+              &:hover {
+                text-decoration: underline;
+              }
             }
-
             .tweet_info {
               @include flex-box;
               @include justify-content(space-between);
-
               .post_date {
                 padding-bottom: 0;
-
                 &:before {
                   content: '[';
                   position: absolute;
@@ -373,7 +399,6 @@
                   font-size: 13px;
                   color: #000;
                 }
-
                 &:after {
                   content: ']';
                   position: absolute;

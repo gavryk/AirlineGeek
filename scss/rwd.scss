@@ -22,20 +22,6 @@
       }
     }
   }
-
-  #posts {
-    .container {
-      @include flex-wrap(wrap);
-      @include justify-content(center);
-      .post_column {
-        width: 50%;
-        margin-bottom: 30px;
-        &:last-child {
-          border-left: none;
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 992px) {
@@ -159,12 +145,10 @@
             height: 2px;
             position: absolute;
           }
-
           &:after {
             top: -5px;
             transform-origin: right;
           }
-
           &:before {
             bottom: -5px;
           }
@@ -192,11 +176,9 @@
   #posts {
     .container {
       div.post_column {
-        width: 100%;
-        &:first-child, &:last-child {
-          width: 100%;
-        }
         .post_description {
+          @include flex-box();
+          @include flex-direction(column);
           text-align: center;
         }
       }
@@ -214,7 +196,6 @@
     }
   }
 }
-
 @media (max-width: 668px) {
   header {
     .container {
@@ -285,6 +266,13 @@
         .post_description {
           @include flex-direction(column);
         }
+      }
+    }
+  }
+  #posts {
+    .container {
+      div.post_column {
+        @include flex-basis(100%);
       }
     }
   }
