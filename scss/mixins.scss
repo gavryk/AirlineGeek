@@ -1,3 +1,13 @@
+@mixin prefix($property,
+$value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value}
+}
+
 @mixin box-sizing($styles) {
   -webkit-box-sizing: $styles;
   -moz-box-sizing: $styles;
@@ -64,3 +74,17 @@
   -ms-flex-basis: $width;
   flex-basis: $width;
 }
+
+@mixin inline-flex() {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+@mixin transition($property: all,$duration: .3s,$easing: ease) {
+  $transitions: ($property $duration $easing);
+  @include prefix('transition',
+          $transitions);
+}
+

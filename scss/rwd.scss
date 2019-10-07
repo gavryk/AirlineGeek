@@ -9,6 +9,7 @@
       .menu {
         li {
           padding: 8px 10px;
+          font-size: 12px;
         }
       }
     }
@@ -16,7 +17,7 @@
   #news_ticker {
     .container {
       a.news_btn {
-        width: 20%;
+        width: 25%;
         font-size: 18px;
         padding: 15px;
       }
@@ -42,7 +43,7 @@
       @include justify-content(center);
       @include flex-wrap(wrap);
       a.news_btn {
-        width: 30%;
+        width: 35%;
         margin-bottom: 15px;
       }
       div.tickers {
@@ -164,7 +165,7 @@
         span {
           @include transform(translateY(5px) rotate(45deg));
           &:before {
-            @include transform(rotate(90deg) translate(-5px, 0px))
+            @include transform(rotate(90deg) translate(-5px, 0px));
           }
           &:after {
             opacity: 0;

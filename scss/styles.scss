@@ -5,7 +5,7 @@
     @include align-items(center);
     padding: 20px 0;
     .news_btn {
-      @include flex-box;
+      @include inline-flex();
       @include justify-content(center);
       @include align-items(center);
       height: 100%;
@@ -15,8 +15,12 @@
       color: #fff;
       background-color: #4b91b7;
       padding: 15px 20px;
-      width: 25%;
+      width: 30%;
       text-transform: uppercase;
+      @include transition(all, .4s, ease-out);
+      &:hover {
+        opacity: .9;
+      }
   }
     .tickers {
       width: 75%;
