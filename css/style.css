@@ -266,7 +266,7 @@ footer {
       font-size: 12px;
       position: absolute;
       bottom: 0;
-      width: 100%;
+      width: 97%;
       left: 0;
       background-color: rgba(255, 255, 255, 0.8);
       padding: 15px 10px; }
@@ -298,7 +298,6 @@ footer {
     -ms-flex-basis: 20%;
     flex-basis: 20%; }
     #posts .container .post_column:first-child {
-      flex-basis: 0;
       border: none; }
     #posts .container .post_column:nth-child(2) {
       -webkit-flex-grow: 2;
@@ -690,7 +689,12 @@ footer {
       -moz-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
       transform: translateX(-100%);
-      transition: .2s ease-out; }
+      -webkit-transition: all 0.4s ease-out;
+      -khtml-transition: all 0.4s ease-out;
+      -moz-transition: all 0.4s ease-out;
+      -ms-transition: all 0.4s ease-out;
+      -o-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-out; }
       header .container .menu li:after {
         display: none; }
     header .container .burger {
@@ -734,7 +738,12 @@ footer {
       -moz-transform: translateX(0);
       -ms-transform: translateX(0);
       transform: translateX(0);
-      transition: .2s ease-out; }
+      -webkit-transition: all 0.4s ease-out;
+      -khtml-transition: all 0.4s ease-out;
+      -moz-transition: all 0.4s ease-out;
+      -ms-transition: all 0.4s ease-out;
+      -o-transition: all 0.4s ease-out;
+      transition: all 0.4s ease-out; }
     header .container .burger_active {
       bottom: -30px;
       z-index: 6; }
@@ -805,6 +814,17 @@ footer {
       margin-left: 30px;
       font-size: 12px; } }
 @media (max-width: 490px) {
+  #airports .container .airport_main_wrapper .left {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
+
   .container .editor_posts .post,
   .container .lates-news-wrapper .post {
     width: 100%; }
@@ -818,7 +838,7 @@ footer {
     -ms-flex-direction: column;
     flex-direction: column; }
 
-  #posts .container div.post_column {
+  #posts div.container div.post_column {
     -webkit-flex-basis: 100%;
     -moz-flex-basis: 100%;
     -ms-flex-basis: 100%;

@@ -109,7 +109,7 @@
         width: 100%;
         z-index: 5;
         @include transform(translateX(-100%));
-        transition: .2s ease-out;
+        @include transition(all, .4s, ease-out);
         li {
           &:after {
             display: none;
@@ -157,7 +157,7 @@
       }
       .menu_active {
         @include transform(translateX(0));
-        transition: .2s ease-out;
+        @include transition(all, .4s, ease-out);
       }
       .burger_active {
         bottom: -30px;
@@ -248,6 +248,16 @@
   }
 }
 @media (max-width: 490px) {
+  #airports {
+    .container {
+      .airport_main_wrapper {
+        .left {
+          @include flex-wrap(wrap);
+          @include justify-content(center);
+        }
+      }
+    }
+  }
   .container {
     .editor_posts,
     .lates-news-wrapper {
@@ -271,7 +281,7 @@
     }
   }
   #posts {
-    .container {
+    div.container {
       div.post_column {
         @include flex-basis(100%);
       }
